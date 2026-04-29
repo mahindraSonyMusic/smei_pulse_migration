@@ -1,0 +1,10 @@
+version: 2
+
+models:
+
+  - name: int_pulse_deal
+    columns:
+      - name: db_id
+        tests:
+          - unique
+          - not_null

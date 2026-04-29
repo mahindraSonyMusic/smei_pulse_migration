@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+
+  - name: tyt   # 🔥 rename source (clear meaning)
+    database: TYTexported   # 🔥 CHANGE THIS
+    schema: dbo
+
+    tables:
+      - name: t_dealdetail
+      - name: t_dealdetailamendment
+      - name: t_dealmaster
+      - name: t_dealartist
+      - name: t_dealartistamendment
+
+  - name: pulse_lookup
+    database: pulse
+    schema: smei
+
+    tables:
+      - name: met_lookup

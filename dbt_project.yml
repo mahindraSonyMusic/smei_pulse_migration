@@ -1,0 +1,32 @@
+name: 'rds_boundary'
+version: '1.0.0'
+config-version: 2
+
+profile: 'rds_boundary'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  rds_boundary:
+
+    +database: pulse      # ✅ target DB
+    +schema: smei         # ✅ target schema
+
+    intermediate:
+      +materialized: incremental   # ✅ match your model
+
+tests:
+  rds_boundary:
+    +severity: warn
+
+vars:
+  start_date: '2020-01-01'

@@ -1,0 +1,14 @@
+rds_boundary:
+  target: rds
+  outputs:
+    rds:
+      type: sqlserver
+      driver: "ODBC Driver 18 for SQL Server"
+      server: "127.0.0.1"
+      port: 1433
+      database: "pulse"
+      schema: "smei"
+      user: "indiadrdsadmin"
+      password: "wRoI8q=1F2+!r#x|M+Ha"
+      encrypt: true
+      trust_cert: true
